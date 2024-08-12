@@ -1,0 +1,79 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MovieRental
+build_property.RootNamespace = MovieRental
+build_property.ProjectDir = C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Pages/CartPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Pages/Catalog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Pages/Display.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Pages/MovieCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Pages/MovieForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVGb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ug14dpn3yk
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-j3u1m225g7
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/birkn/Documents/IHCC/Summer 2024/Advanced .Net/BlazorMovieApp/MovieRental/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

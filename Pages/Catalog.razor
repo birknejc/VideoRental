@@ -1,0 +1,49 @@
+﻿@page "/catalog"
+@using MovieRental.Models
+@using MovieRental.Services
+@inject MovieService MovieService
+@inject CartService CartService
+@inject NavigationManager Navigation
+
+<h3>Movie Catalog</h3>
+@if (movies == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div class="row">
+        @foreach (var movie in movies)
+        {
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">@movie.Title</h5>
+                        <p class="card-text">@movie.Description</p>
+                        <p class="card-text">Format: @movie.Format</p>
+                        <input type="checkbox" @bind="@selectedMovieIds[movie.Id]" /> Select
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <button class="btn btn-primary mt-3" @onclick="AddSelectedToCart">Add Selected to Cart</button>
+}
+
+@code {
+    private List<Movie> movies;
+    private Dictionary<int, bool> selectedMovieIds = new Dictionary<int, bool>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        movies = await MovieService.GetMoviesAsync();
+        selectedMovieIds = movies.ToDictionary(movie => movie.Id, movie => false);
+    }
+
+    private void AddSelectedToCart()
+    {
+        var selectedMovies = movies.Where(movie => selectedMovieIds[movie.Id]).ToList();
+        CartService.AddToCart(selectedMovies);
+        Navigation.NavigateTo("/cart"); // Navigate to the Cart page
+    }
+}

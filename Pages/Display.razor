@@ -1,0 +1,68 @@
+﻿@page "/display"
+@using MovieRental.Models
+@using MovieRental.Services
+@inject OrderService OrderService
+
+<h3>Orders</h3>
+
+@if (orders == null)
+{
+    <p>Loading...</p>
+}
+else if (!orders.Any())
+{
+    <p>No orders found.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer Name</th>
+                <th>Customer Email</th>
+                <th>Movies</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in orders)
+            {
+                <tr>
+                    <td>@order.OrderID</td> <!-- Display OrderID -->
+                    <td>@order.CustomerName</td> <!-- Display CustomerName -->
+                    <td>@order.CustomerEmail</td> <!-- Display CustomerEmail -->
+                    <td>
+                        @if (order.Movies != null && order.Movies.Any())
+                        {
+                            @foreach (var movie in order.Movies)
+                            {
+                                <p>@movie.Title (@movie.Format)</p>
+                            }
+                        }
+                        else
+                        {
+                            <p>No movies found for this order.</p>
+                        }
+                    </td>
+                    <td>@order.TotalAmount</td> <!-- Display TotalAmount -->
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Order> orders;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadOrdersAsync();
+    }
+
+    private async Task LoadOrdersAsync()
+    {
+        orders = await OrderService.GetOrdersAsync();
+        StateHasChanged();
+    }
+}
