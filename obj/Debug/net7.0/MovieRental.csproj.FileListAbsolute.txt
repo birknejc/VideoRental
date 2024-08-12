@@ -28,6 +28,8 @@ C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRent
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\bin\Debug\net7.0\Npgsql.dll
+C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\bin\Debug\net7.0\System.Drawing.Common.dll
@@ -57,6 +59,7 @@ C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRent
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\obj\Debug\net7.0\MovieRental.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\obj\Debug\net7.0\MovieRental.RazorAssemblyInfo.cache
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\obj\Debug\net7.0\MovieRental.RazorAssemblyInfo.cs
+C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\obj\Debug\net7.0\MovieRental.sourcelink.json
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\MovieRental\obj\Debug\net7.0\staticwebassets\msbuild.MovieRental.Microsoft.AspNetCore.StaticWebAssets.props
