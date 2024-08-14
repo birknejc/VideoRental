@@ -18,13 +18,13 @@ builder.Services.AddScoped<MovieService>();
 builder.Services.AddScoped<OrderService>();
 
 // Connect directly to the SQL Server database
-//builder.Services.AddDbContext<AppDbContext>(options =>
-//    options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=VideoRental;Trusted_Connection=True;TrustServerCertificate=True;"));
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=VideoRental;Trusted_Connection=True;TrustServerCertificate=True;"));
 
 
 // Connect to PostgreSQL database
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+//builder.Services.AddDbContext<AppDbContext>(options =>
+    //options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

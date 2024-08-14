@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yM58W/sIxmysKkyxxNwjIur6vrMpIl/RSD/MEonxr1o=",
+  "Hash": "w2qeGNOGZLr5tHErSe4tTe7D+IKRY8fTFUYBo5MQsSo=",
   "Source": "MovieRental",
   "BasePath": "_content/MovieRental",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\birkn\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\7.0.20\\staticwebassets\\AuthenticationService.js",
+      "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\birkn\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\7.0.20\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "RelativePath": "AuthenticationService.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\birkn\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\7.0.20\\staticwebassets\\AuthenticationService.js"
+    },
     {
       "Identity": "C:\\Users\\birkn\\Documents\\IHCC\\Summer 2024\\Advanced .Net\\BlazorMovieApp\\MovieRental\\obj\\Debug\\net7.0\\scopedcss\\bundle\\MovieRental.styles.css",
       "SourceId": "MovieRental",
