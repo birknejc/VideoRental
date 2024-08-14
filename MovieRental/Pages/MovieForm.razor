@@ -1,0 +1,162 @@
+﻿@page "/movieform"
+@using MovieRental.Models
+@using MovieRental.Services
+@inject MovieService MovieService
+
+<h3>@(currentMovie.Id == 0 ? "Add a New Movie" : "Edit Movie")</h3>
+
+<EditForm Model="currentMovie" OnValidSubmit="SaveMovie">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <InputText id="title" class="form-control" @bind-Value="currentMovie.Title" />
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <InputTextArea id="description" class="form-control" @bind-Value="currentMovie.Description" />
+    </div>
+
+    <div class="form-group">
+        <label for="format">Format</label>
+        <InputSelect id="format" class="form-control" @bind-Value="currentMovie.Format">
+            <option value="">Select Format</option>
+            <option value="DVD">DVD</option>
+            <option value="VHS">VHS</option>
+        </InputSelect>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Movie</button>
+    <button type="button" class="btn btn-secondary" @onclick="ClearForm">Clear Form</button>
+</EditForm>
+
+@if (isSuccess)
+{
+    <div class="alert alert-success mt-3">
+        Movie saved successfully!
+    </div>
+}
+
+@if (isError)
+{
+    <div class="alert alert-danger mt-3">
+        There was an error saving the movie. Please try again.
+    </div>
+}
+
+<h4>Existing Movies</h4>
+
+@if (movies == null)
+{
+    <p>Loading...</p>
+}
+else if (!movies.Any())
+{
+    <p>No movies found.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Format</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in movies)
+            {
+                <tr>
+                    <td>@movie.Title</td>
+                    <td>@movie.Description</td>
+                    <td>@movie.Format</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" @onclick="() => EditMovie(movie)">Edit</button>
+                        <button class="btn btn-danger btn-sm" @onclick="() => DeleteMovie(movie.Id)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Movie currentMovie = new Movie();
+    private List<Movie> movies;
+    private bool isSuccess = false;
+    private bool isError = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadMoviesAsync();
+    }
+
+    private async Task LoadMoviesAsync()
+    {
+        movies = await MovieService.GetMoviesAsync();
+    }
+
+    private async Task SaveMovie()
+    {
+        try
+        {
+            if (currentMovie.Id == 0)
+            {
+                // Add new movie
+                await MovieService.AddMovieAsync(currentMovie);
+            }
+            else
+            {
+                // Update existing movie
+                await MovieService.UpdateMovieAsync(currentMovie);
+            }
+
+            isSuccess = true;
+            isError = false;
+
+            // Reload the movies and clear the form
+            await LoadMoviesAsync();
+            ClearForm();
+        }
+        catch (Exception)
+        {
+            isError = true;
+            isSuccess = false;
+        }
+    }
+
+    private void EditMovie(Movie movie)
+    {
+        currentMovie = new Movie
+            {
+                Id = movie.Id,
+                Title = movie.Title,
+                Description = movie.Description,
+                Format = movie.Format
+            };
+    }
+
+    private async Task DeleteMovie(int id)
+    {
+        try
+        {
+            await MovieService.DeleteMovieAsync(id);
+            await LoadMoviesAsync();
+        }
+        catch (Exception)
+        {
+            // Handle error
+        }
+    }
+
+    private void ClearForm()
+    {
+        currentMovie = new Movie();
+        isSuccess = false;
+        isError = false;
+    }
+}

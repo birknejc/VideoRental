@@ -1,0 +1,30 @@
+﻿@using MovieRental.Models
+@using Microsoft.AspNetCore.Components
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">@Movie.Title</h5>
+        <p class="card-text">@Movie.Description</p>
+        <p class="card-text">Format: @Movie.Format</p>
+        <input type="checkbox" @bind="IsSelected" />
+        <button class="btn btn-primary" @onclick="AddToCart">Add to Cart</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Movie Movie { get; set; }
+
+    [Parameter]
+    public EventCallback<Movie> OnAddToCart { get; set; }
+
+    private bool IsSelected { get; set; } = false;
+
+    private async Task AddToCart()
+    {
+        if (IsSelected)
+        {
+            await OnAddToCart.InvokeAsync(Movie);
+        }
+    }
+}
