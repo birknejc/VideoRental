@@ -164,6 +164,7 @@ C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\TestProje
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\TestProject1\obj\Debug\net7.0\TestProject1.AssemblyInfoInputs.cache
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\TestProject1\obj\Debug\net7.0\TestProject1.AssemblyInfo.cs
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\TestProject1\obj\Debug\net7.0\TestProject1.csproj.CoreCompileInputs.cache
+C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\TestProject1\obj\Debug\net7.0\TestProject1.sourcelink.json
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\TestProject1\obj\Debug\net7.0\TestProj.494AA513.Up2Date
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\TestProject1\obj\Debug\net7.0\TestProject1.dll
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\BlazorMovieApp\TestProject1\obj\Debug\net7.0\refint\TestProject1.dll
