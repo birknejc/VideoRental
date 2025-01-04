@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MovieRental.Models;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+
 
 namespace MovieRental.DBContext
 {

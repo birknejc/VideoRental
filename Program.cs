@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using MovieRental.Data;
 using MovieRental.DBContext;  // For AppDbContext
 using MovieRental.Services;   // For MovieService and OrderService
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,13 +19,13 @@ builder.Services.AddScoped<MovieService>();
 builder.Services.AddScoped<OrderService>();
 
 // Connect directly to the SQL Server database
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=VideoRental;Trusted_Connection=True;TrustServerCertificate=True;"));
+//builder.Services.AddDbContext<AppDbContext>(options =>
+    //options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=VideoRental;Trusted_Connection=True;TrustServerCertificate=True;"));
 
 
 // Connect to PostgreSQL database
-//builder.Services.AddDbContext<AppDbContext>(options =>
-    //options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

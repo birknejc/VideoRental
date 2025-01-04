@@ -2,6 +2,7 @@
 using MovieRental.Models;
 using MovieRental.DBContext;
 using System;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 namespace MovieRental.Services
 {
@@ -16,15 +17,42 @@ namespace MovieRental.Services
 
         public async Task PlaceOrderAsync(Order order)
         {
-            order.OrderDate = DateTime.Now;
-            order.TotalAmount = order.Movies.Sum(m => GetMoviePrice(m.Format));
+            try
+            {
+                order.OrderDate = order.OrderDate.ToUniversalTime();
+                order.TotalAmount = order.Movies.Sum(m => GetMoviePrice(m.Format));
+                order.OrderID = Guid.NewGuid().ToString();
 
-            // Generate a unique OrderID
-            order.OrderID = Guid.NewGuid().ToString();
+                var trackedMovies = new List<Movie>();
 
-            _context.Orders.Add(order);
-            await _context.SaveChangesAsync();
+                foreach (var movie in order.Movies)
+                {
+                    var existingMovie = await _context.Movies.FindAsync(movie.Id);
+                    if (existingMovie != null)
+                    {
+                        trackedMovies.Add(existingMovie);
+                    }
+                    else
+                    {
+                        throw new Exception($"Movie with ID {movie.Id} does not exist in the database.");
+                    }
+                }
+
+                order.Movies = trackedMovies;
+
+                _context.Orders.Add(order);
+                Console.WriteLine($"Order added to the context for customer: {order.CustomerName}, Total: {order.TotalAmount}.");
+                await _context.SaveChangesAsync();
+                Console.WriteLine("Order saved to the database.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in PlaceOrderAsync: {ex.Message}");
+                throw;
+            }
         }
+
+
 
         public async Task<List<Order>> GetOrdersAsync()
         {

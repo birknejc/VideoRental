@@ -59,7 +59,7 @@ namespace MovieRental.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movies");
+                    b.ToTable("Movies", (string)null);
                 });
 
             modelBuilder.Entity("MovieRental.Models.Order", b =>
@@ -90,7 +90,7 @@ namespace MovieRental.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("MovieOrder", b =>
