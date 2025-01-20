@@ -217,3 +217,4 @@ C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\Working Code\BlazorMovie
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\Working Code\BlazorMovieApp\MovieRental\bin\Debug\net7.0\MovieRental.staticwebassets.endpoints.json
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\Working Code\BlazorMovieApp\MovieRental\obj\Debug\net7.0\staticwebassets.build.endpoints.json
 C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\Working Code\BlazorMovieApp\MovieRental\obj\Debug\net7.0\staticwebassets\msbuild.MovieRental.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\birkn\Documents\IHCC\Summer 2024\Advanced .Net\Working Code\BlazorMovieApp\MovieRental\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
